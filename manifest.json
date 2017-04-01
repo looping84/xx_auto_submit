@@ -1,0 +1,23 @@
+
+{
+  "name": "自动上架脚本",
+  "description": "检测审核状态，自动上架",
+  "version": "1.2",
+  "background": { "scripts": ["background.js"] },
+  "content_scripts": [ {
+        "js": [ "jquery-3.1.1.min.js","content.js"  ],
+        "matches": [ "http://dev.xxzhushou.cn/versionList.html*"]    
+  }],
+  "browser_action": {
+    "default_title": "自动上架脚本",
+    "default_icon": "icon2.png"
+  },
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "notifications",
+    "http://*.xxzhushou.cn/",
+    "https://*.xxzhushou.cn/"
+  ],
+  "manifest_version": 2
+}
